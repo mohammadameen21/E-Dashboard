@@ -1,0 +1,16 @@
+Step 1 -> We installed mongoose, express, nodemon
+
+Step 2 -> Check is our server is working or not
+
+Step 3 -> Connecting mongodb database
+
+Step 4 -> Make file structure
+
+Step 5 -> This will give enter json data in postman
+resp.send(req.body)
+
+Step 6 -> Install npm i cors
+to remove error of two diffrent project frontend and backend.
+
+Step 7 -> collectData method which will get values from input registration form and store into our db.
+
