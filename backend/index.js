@@ -1,4 +1,5 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const cors = require("cors");
 require("./db/config");
 const User = require('./db/User');
@@ -38,6 +39,20 @@ app.post("/login", async (req,resp) => {
     }else{
         resp.send({result:"No User Found"})
     }
-})
+});
+
+
+
+app.get("/products", async  (req,resp) => {
+
+   
+    const products = await Product.find();
+    if(products.length > 0){
+        resp.send(products)
+    }else{
+        resp.send({result: "NO Product Found!"})
+    }
+    
+});
 
 app.listen(9800);
